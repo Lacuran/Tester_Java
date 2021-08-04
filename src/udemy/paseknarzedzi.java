@@ -13,9 +13,9 @@ public class paseknarzedzi extends JFrame {
     public void initComponents(){
         this.setTitle("Pasek narzędzi");
         this.setBounds(300,300,300,300);
-        pasekNarzedzi.add(new KolorowyButton(new ActionColor("Zmieniam kolor na zielony", new ImageIcon("green.png"), Color.green)));
-        pasekNarzedzi.add(new KolorowyButton(new ActionColor("Zmieniam kolor na czerwony", new ImageIcon("red.png"), Color.red)));
-        pasekNarzedzi.add(new KolorowyButton(new ActionColor("Zmieniam kolor na niebieski", new ImageIcon("blue.png"), Color.blue)));
+        pasekNarzedzi.add(new KolorowyButton(new ActionColor("Zmieniam kolor na zielony", new ImageIcon(this.getClass().getResource("/obrazki/green.png")), Color.green)));
+        pasekNarzedzi.add(new KolorowyButton(new ActionColor("Zmieniam kolor na czerwony", new ImageIcon(this.getClass().getResource("/obrazki/red.png")), Color.red)));
+        pasekNarzedzi.add(new KolorowyButton(new ActionColor("Zmieniam kolor na niebieski", new ImageIcon(this.getClass().getResource("/obrazki/blue.png")), Color.blue)));
         pasekNarzedzi.add(button);
 
         button.addActionListener(new ActionListener() {
@@ -70,7 +70,7 @@ public class paseknarzedzi extends JFrame {
                             KolorowyButton tmp = (KolorowyButton) pasekNarzedzi.getComponent(i);
                             tmp.setBackground(Color.WHITE);
                             tmp.setZaznaczony(false);
-                            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("wypelnienie.png").getImage(),new Point(0, 0), "Nasz Kursorek"));
+                            panel.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(this.getClass().getResource("/obrazki/wypelnienie.png")).getImage(),new Point(0, 0), "Nasz Kursorek"));
 
                         }
                     }
