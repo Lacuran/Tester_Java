@@ -52,7 +52,7 @@ public class podzieleniepanel extends JFrame {
             this.nazwa = nazwa;
             this.opis = opis;
 
-            obrazek = new ImageIcon(this.getClass().getResource("/obrazki/" + nazwa + ".jpg"));
+            obrazek = new ImageIcon(this.getClass().getResource("/obrazki/" + nazwa + ".jpg")); //ta metoda dodaje ściezke do grafiki na aplikacji
         }
 
         public String toString(){
