@@ -1,32 +1,26 @@
 package kata;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
-
 
 public class create_phone_number {
 
     public static void main(String[] args) {
+        //ćwiczenie z codewars które polegało na zmiane formatu nr telefonu i dodanie od niego "-"
+
 
         Scanner in = new Scanner(System.in);
-
-        int tablicaZNumerem[] = new int[9];
         System.out.println("Podaj numer telefonu: ");
 
-        for (int i = 0; i < tablicaZNumerem.length; i++){
-            tablicaZNumerem[i] = in.nextInt();
+        int nrTel = in.nextInt();
+        int lenght = String.valueOf(nrTel).length();
+
+        if (lenght > 9){
+            System.out.println("Za długi nr telefonu.");
         }
-
-        for (int i = 0; i < tablicaZNumerem.length; i++){
-            System.out.print(tablicaZNumerem[i]);
-
-            if (tablicaZNumerem[i] == tablicaZNumerem[2]){
-                System.out.print("-");
-            } else if (tablicaZNumerem[i] == tablicaZNumerem[5]){
-                System.out.print("-");
-            }
+        else {
+            String telefon = String.valueOf(nrTel);
+            String poprawnyFormat = telefon.substring(0,3) + "-" + telefon.substring(3,6) + "-" + telefon.substring(6);
+            System.out.println(poprawnyFormat);
         }
     }
-
 }
