@@ -19,5 +19,10 @@ public class vovle_count {
             }
         }
         System.out.println("Ilosć samogłosek: " + suma);
+
+
+        System.out.println("Zdanie bez spacji: ");
+        x = x.replaceAll("\\s","");
+        System.out.println(x);
     }
 }
